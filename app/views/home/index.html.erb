@@ -1,12 +1,15 @@
 <div class="bg-dark"></div>
 <div class="home-information">
   <h1 class="slogan">Any swipe can change your life.</h1>
-  <a class="btn btn-social btn-lg btn-facebook">
-    <i class="fa fa-facebook"></i> Sign in with Facebook
-  </a>
-  <a class="btn btn-social btn-lg btn-twitter">
+  <%= link_to "auth/facebook", class: "btn btn-social btn-lg btn-facebook" do %>
+    <i class="fa fa-facebook"></i> Sign in with Facebook 
+  <% end %>
+  <%= link_to "auth/facebook", class: "btn btn-social btn-lg btn-twitter" do %>
+    <i class="fa fa-twitter"></i> Sign in with Twitter 
+  <% end %>  
+<!--   <a class="btn btn-social btn-lg btn-twitter">
     <i class="fa fa-twitter"></i> Sign in with Twitter
-  </a>  
+  </a>  --> 
   <br /><br />
 </div>
 
