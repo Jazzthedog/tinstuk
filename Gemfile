@@ -50,3 +50,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'omniauth-facebook'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'paperclip'
+# gem 'paperclip', '~> 4.2' I used this for pin_board!!!
+gem 'aws-sdk', '< 2.0'
+
