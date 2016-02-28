@@ -45,18 +45,30 @@
 </script>
 
 <script type="text/javascript">
-$("#tinderslide").jTinder({
-    onDislike: function (item) {
-        //alert('Dislike image ' + (item.index()+1));
-    },
-    onLike: function (item) {
-        //alert('Like image ' + (item.index()+1));
-    },
-    animationRevertSpeed: 200,
-    animationSpeed: 400,
-    threshold: 1,
-    likeSelector: '.like',
-    dislikeSelector: '.dislike'
+
+  /**
+    * Set button action to trigger jTinder like and dislike. from main.js in jtinder
+  */
+
+  $('.actions .like, .actions .dislike').click(function(e){
+    e.preventDefault();
+    $("#tinderslide").jTinder($(this).attr('class'));
+  });
+
+  $("#tinderslide > ul li").tsort({attr:"id"});
+
+  $("#tinderslide").jTinder({
+      onDislike: function (item) {
+          //alert('Dislike image ' + (item.index()+1));
+      },
+      onLike: function (item) {
+          //alert('Like image ' + (item.index()+1));
+      },
+      animationRevertSpeed: 200,
+      animationSpeed: 400,
+      threshold: 1,
+      likeSelector: '.like',
+      dislikeSelector: '.dislike'
 });
 </script>
 
