@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login
-  before_action :set_user, only: [:edit, :profile, :update, :destroy]  
+  before_action :set_user, only: [:edit, :profile, :update, :destroy, :get_email]  
 
   def index
     if params[:id]
@@ -47,6 +47,13 @@ class UsersController < ApplicationController
                current_user.inverse_friendships.where(state: "ACTIVE").map(&:user)
   end  
 
+
+  def get_email
+    respond_to do |format|
+      format.js
+    end
+  end
+  
   private
 
   def set_user
